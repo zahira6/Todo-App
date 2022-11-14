@@ -1,0 +1,210 @@
+$fontsize: calc(10px + 0.5vw);
+
+
+#todos{
+    font-size: $fontsize;
+    padding: {
+        top: 2%;
+        bottom: calc(20% + -7vw);
+    }
+    margin: {
+        bottom: 2%;
+        left: 15%;
+        right: 15%
+    };
+    border: solid darkorange thin;
+}
+    
+#dueDate{
+    float: right;
+    margin: {
+        top: -3%;
+        right: 10%
+    };
+    text-align: center;
+}
+    
+#todoDescription{
+    float: left;
+    margin: {
+        left: 15%;
+        top: 5%
+    };
+    width: 40%;
+    text-align: left;
+}
+        
+#delete{
+    background-color: transparent;
+    border: none; 
+    padding: 8px 12px; 
+    font-size: $fontsize; 
+    float: right;
+    margin: {
+        right: 13%;
+        top: 3%;
+    };
+    text-align: center;
+}
+    
+#done{
+    transform: scale(2);
+    float: left;
+    margin: {
+        left: 5%;
+        top: 6%
+    };
+}
+    
+#title{
+    font-weight: bold;
+    float: left;
+    margin: {
+        left: 15%;
+        top: 2%;
+    };
+    width: 40%;
+    text-align: left;
+}
+
+#NewTodo{
+    display: inline-block;
+    font-size: $fontsize;
+    margin: {
+        top: 1%;
+        left: 10%;
+    }
+    width: 100%;
+    
+p{
+    font: {
+        family: serif;
+        style: oblique;
+        size: 30px;
+    };
+    float: left;
+    margin: {
+        top: 5%;
+        left: 5%;
+        right: 2%;
+    }
+    text-shadow: 1px 1px 2px black;
+}
+
+#todo{
+    float: right;
+    margin: {
+        right: 40%;
+        top: 5%
+    };
+    width: 40%;
+}
+
+#description{
+    margin: {
+        right: 40%;
+        top: 2%;
+        bottom: 2%
+    };
+    float: right;
+    width: 40%;
+}
+    
+#date{
+    margin: {
+        right: 40%;
+        top: 2%
+    }
+    float: right;
+    width: 40%;
+}
+
+#button{
+    border: solid black thin; 
+    padding: {
+        top: calc(4px + 1vw);
+        bottom: calc(4px + 1vw);
+        left: calc(7px + 1vw);
+        right: calc(7px + 1vw); 
+    }
+    font-size: 14px; 
+    float: right;
+    margin: {
+        right: 30%;
+        top: calc(-18% + 10vw)
+    };
+}
+
+#date:hover{
+    background-color: lightgray;
+}
+}
+
+#task{
+    margin: {
+        left: 15%;
+        top: 2%
+    };
+    font-size: $fontsize;
+}
+
+
+
+@media screen and (max-width: 450px) and (min-width: 0px) {
+    #NewTodo{
+        margin: {
+            top: 5%;
+            left: 10%;
+            bottom: 5%;
+        }
+    }
+
+    #NewTodo p{
+        font-size: 20px;
+        margin: {
+            left: 5%;
+        }
+    }
+    
+    #NewTodo #button{
+        padding: 8px 12px; 
+        font-size: 14px; 
+        margin: {
+            right: 20%;
+            top: -15%
+        };
+    }
+
+    #todos{
+        padding: {
+            top: 5%;
+            bottom: 20%;
+        }
+        margin: {
+            bottom: 5%;
+            left: 5%;
+            right: 5%
+        };
+    }
+        
+    #todoDescription{
+        overflow:scroll;
+    }
+        
+        
+    #todos #done{
+        transform: scale(1.5);
+        margin: {
+            left: 5%;
+            top: 5%
+        };
+    }
+        
+    #title{
+        overflow:scroll;
+    }
+}
+
+
+
+

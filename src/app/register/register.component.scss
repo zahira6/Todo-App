@@ -1,0 +1,132 @@
+$fontsize: calc(10px + 0.5vw);
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    margin: {
+        top: 5%;
+        left: 30%;
+        bottom: 3%;
+    }
+    font-size: 30px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: $fontsize;
+}
+
+#labelEmail, #labelPassword, #labelConfirm{
+    line-height: 150%;
+    margin: {
+        left: 22%;
+        top: 2%;
+    };
+}
+
+#email, #password, #confirm{
+    margin: {
+        bottom: 2%;
+        left: 10%;
+        right: 30%;
+    }
+    display: flex;
+    width: 30%;
+}
+
+#buttons{
+    display: inline-flex;
+    margin: {
+        top: 2%;
+        bottom: 5%;
+        left: 30%;
+    }
+    width: 30%;
+    justify-content: space-between;
+}
+
+#register{
+    font-size: $fontsize;
+    width: 30%;
+    background-color: #ffdd00;
+    border: none;
+    border: solid grey thin;
+
+}
+
+#reset{
+    font-size: $fontsize;
+    margin-right: 20%;
+    width: 25%;
+    background-color: #ffdd00;
+    border: none;
+    border: solid grey thin;
+}
+
+#small{
+    margin: {
+        top: 10%;
+        bottom: 5%;
+    }
+    padding-left: 20%;
+    color: darkred;
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        margin: {
+            top: 15%;
+            left: 20%;
+            bottom: 10%;
+        }
+        font-size: 20px;
+    }
+
+    #labelEmail, #labelPassword, #labelConfirm{
+        margin: {
+            left: 10%;
+            top: 5%;
+        };
+    }
+    
+    #email, #password, #confirm{
+        margin: {
+            bottom: 5%;
+            left: 10%;
+            right: 30%;
+        }
+        width: 60%;
+    }
+    
+    #buttons{
+        margin: {
+            top: 10%;
+            bottom: 5%;
+            left: 20%;
+        }
+        width: 65%;
+    }
+    
+    #register{
+        width: 35%;
+    }
+    
+    #reset{
+        margin-right: 15%;
+        width: 30%;
+    }
+    
+    #small{
+        margin: {
+            top: 10%;
+            bottom: 5%;
+        }
+        padding-left: 20%;
+    }
+}

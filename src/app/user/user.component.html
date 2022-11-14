@@ -1,0 +1,22 @@
+<head>
+  <link href="user.component.scss" rel="stylesheet">
+</head>
+<body>
+  <h1 class="title">
+      Hello!
+  </h1>
+ <div id="top">
+    <p>Your Todos:</p>
+    <div *ngFor="let todo of todoService.getDoneTodos(showDone ? undefined : false)" id="todos">
+    <ul>
+      <li>{{todo.title}}</li>
+    </ul>
+  </div>
+  </div>
+  <div class="bar-chart">
+  <div id="bars">
+    <p>Tasks todo:</p> <div [ngStyle]="{ 'width': getTodoPercentage().toString() + '%' }" class="todo-bar"><p> {{ getTodoPercentage() | number:'1.0-0' }}%</p></div> 
+    <p>Tasks done: </p>  <div [ngStyle]="{ 'width': getDonePercentage().toString() + '%' }" class="done-bar"><p> {{ getDonePercentage() | number:'1.0-0' }}%</p></div>
+  </div>
+  </div>
+</body>

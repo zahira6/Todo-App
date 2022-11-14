@@ -1,0 +1,51 @@
+h1{
+    margin: {
+        top: 8%;
+        left: 35%
+    };
+    font: {
+        size: 55px;
+        weight: lighter;
+        family: Arial, Helvetica, sans-serif;
+    }
+    text-shadow: 2px 2px 2px black;
+}
+
+h2{
+    font: {
+        family: serif;
+        style: oblique;
+        size: 50px;
+    }
+    margin: {
+        top: 8%;
+        left: 39%
+    };
+    width: 15%;
+    text-align: center;
+    color: darkgray;
+    text-shadow: 2px 2px 2px black;
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        margin: {
+            top: 30%;
+            left: 10%
+        };
+        font: {
+            size: 44px; 
+        }
+    }
+    
+    h2{
+        font: {
+            size: 40px;
+        }
+        margin: {
+            top: 25%;
+            left: 25%
+        };
+        width: 50%;
+    }
+}
