@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Todo } from './todo';
+import { Todo } from '../model/Todo';
 
 const AUTH_API = 'http://localhost:8080/todo';
 
@@ -11,12 +11,12 @@ const AUTH_API = 'http://localhost:8080/todo';
 })
 export class TodoService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  public todos: Todo[] = [];
-  public tokenKey = 'access_token';
+  todos: Todo[] = [];
+  tokenKey = 'access_token';
   filter: 'all' | 'active' | 'done' = 'all';
   constructor(private http: HttpClient, private router: Router) { }
 
-  public getToken() {
+  getToken() {
     return sessionStorage.getItem(this.tokenKey);
   }
 
@@ -35,7 +35,7 @@ export class TodoService {
   })  })
 }
 
-  public getDoneTodos(done?: boolean): Todo[] {
+  getDoneTodos(done?: boolean): Todo[] {
     return this.todos
       .filter(t => done === undefined || (done && t.doneDate) || (!done && !t.doneDate))
   }
@@ -78,14 +78,6 @@ export class TodoService {
       this.todos[index].dueDate = dueDate;
     }
   }
-
-
-  /*public deleteTodoById(id: number): void {
-    const index = this.todos.findIndex(t => t.id === id);
-    if (index >= 0) {
-      this.todos.splice(index, 1);
-    }
-  }**/
 
   toggleDoneStateById(id: string): void {
     const index = this.todos.findIndex(t => t.id === id);

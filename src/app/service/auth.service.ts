@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs';
 import { Router } from '@angular/router';
-import { Registration } from './model/registration';
+import { Registration } from '../model/registration';
 
 
 const AUTH_API = 'http://localhost:8080/user';
@@ -14,13 +14,13 @@ const AUTH_API = 'http://localhost:8080/user';
 export class AuthService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   private loggedIn = false;
-  public tokenKey = 'access_token';
+  tokenKey = 'access_token';
   static this: any;
 
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  public getToken() {
+  getToken() {
     return sessionStorage.getItem(this.tokenKey);
   }
 

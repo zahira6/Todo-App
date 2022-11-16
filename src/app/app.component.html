@@ -8,16 +8,7 @@
 
 <body>
   <header>
-  <div *ngIf="loggedOut()" id="start">
-    <nav>
-      <ul>
-      <a routerLink="/home" id="home">Home</a>
-      <a routerLink="user/login" id="login">Login</a>
-      <a routerLink="user/register" id="register">Register</a>
-    </ul>
-    </nav>
-  </div>
-  <div *ngIf="loggedIn()">
+  <div *ngIf="loggedIn() else notLoggedIn" id="start">
     <nav>
       <ul>
       <a routerLink="/profile" id="profile">Profile</a>
@@ -26,6 +17,18 @@
     </ul>
     </nav>
   </div>
+  <ng-template #notLoggedIn>
+    <div>
+      <nav>
+        <ul>
+        <a routerLink="/home" id="home">Home</a>
+        <a routerLink="user/login" id="login">Login</a>
+        <a routerLink="user/register" id="register">Register</a>
+      </ul>
+      </nav>
+    </div>
+  </ng-template>
+  
   <router-outlet></router-outlet>
 </header>
 </body>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '../todo';
-import { TodoService } from '../todo.service';
+import { Todo } from '../../model/Todo';
+import { TodoService } from '../../service/todo.service';
 
 @Component({
   selector: 'app-user',
@@ -8,8 +8,8 @@ import { TodoService } from '../todo.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  public todoTitle = '';
-  public showDone = false;
+  todoTitle = '';
+  showDone = false;
   todos: Todo[] | undefined
 
 

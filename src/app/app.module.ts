@@ -5,14 +5,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
-import { AuthService } from './auth.service';
-import { HomeComponent } from './home/home.component';
-import { GuardService } from './guard.service';
-import { LogoutComponent } from './logout/logout.component';
-import { TodoComponent } from './todo/todo.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserComponent } from './components/user/user.component';
+import { AuthService } from './service/auth.service';
+import { HomeComponent } from './components/home/home.component';
+import { GuardService } from './service/guard.service';
+import { LogoutComponent } from './components/logout/logout.component';
+import { TodoComponent } from './components/todo/todo.component';
 import { AuthInterceptor } from './auth-interceptor';
 
 const routes: Routes = [

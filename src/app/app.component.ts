@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth.service';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,6 @@ export class AppComponent implements OnInit{
 
   loggedIn(): boolean{
     return this.auth.LoggedIn();
-  }
-  loggedOut(): boolean{
-    return !this.loggedIn();
   }
 
   ngOnInit() {}

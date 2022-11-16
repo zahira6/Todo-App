@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../todo.service';
+import { TodoService } from '../../service/todo.service';
 
 @Component({
   selector: 'app-todo',
@@ -7,14 +7,14 @@ import { TodoService } from '../todo.service';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
-  public Title = '';
-  public Description = '';
-  public DueDate = new Date();
-  public doneDate: Boolean = false;
-  public showDone = false;
-  public todoOwner = '';
-  public Id = '';
-  public todos= this.todoService.todos
+  Title = '';
+  Description = '';
+  DueDate = new Date();
+  doneDate: Boolean = false;
+  showDone = false;
+  todoOwner = '';
+  Id = '';
+  todos= this.todoService.todos
 
   constructor(public todoService: TodoService) { }
 
@@ -37,7 +37,7 @@ export class TodoComponent implements OnInit {
     this.todoService.getTodos()
   }
 
-  public getTodoTitle(): string {
+  getTodoTitle(): string {
     const title = this.Title
     return title
   }
